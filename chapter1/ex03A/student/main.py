@@ -11,5 +11,5 @@ speedInFeetPerSecond = distanceInFeet/timeInSeconds
 
 print ("The speed in feet per second is " + str(speedInFeetPerSecond))
 print("The speed in knots is: " + str(speedInKnots))
-print("the speed in miles per hour is " + str(speedInMilesPerHour))
+print("The speed in miles per hour is " + str(speedInMilesPerHour))
 
