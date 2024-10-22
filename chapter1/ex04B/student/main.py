@@ -6,6 +6,6 @@ whole_num = int(input("Enter a whole number: "))
 
 print("_" * 10)
 
-print ((str(whole_num) * 2) * 5)
+print ((int(whole_num) * 2) * 5)
 
 print("_" * 10)
