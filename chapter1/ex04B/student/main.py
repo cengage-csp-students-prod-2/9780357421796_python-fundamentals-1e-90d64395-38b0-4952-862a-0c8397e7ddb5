@@ -1,7 +1,6 @@
 # Write your code here
 """
-This script prints the multiplication table of a whole number
-by the multiples of 2, from 1 to 10.
+This is how we create a multiplication table
 """
 
 # Get user input and cast it to an integer
