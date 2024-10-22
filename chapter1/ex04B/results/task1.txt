@@ -3,7 +3,7 @@ Status: PASSED!
 Check: 1
 Test: Assign variable `whole_num`
 Reason: whole_num\s*=\s*int\(input\(".*"\)\)` was found in the program.None
-Timestamp: 2024-10-22 22:55:49.103773
+Timestamp: 2024-10-22 23:55:29.960642
 
 Status: FAILED!
 Check: 2
@@ -11,30 +11,40 @@ Test: Docstring added
 Reason: Unable to find '^("""|''').*(
 .*)*("""|''')' in the program.
 Error : str - AssertionError
-Timestamp: 2024-10-22 22:55:49.104112
+Timestamp: 2024-10-22 23:55:29.960998
 
 Status: FAILED!
-Check: 3
-Test: Output is correct
-Reason: Unable to find '['Output is correct']' in the program's output.
-Enter a whole number: __________
-7 * 2 = 14
-7 * 4 = 28
-7 * 6 = 42
-7 * 8 = 56
-7 * 10 = 70
-7 * 12 = 84
-7 * 14 = 98
-7 * 16 = 112
-7 * 18 = 126
-7 * 20 = 140
-__________
-.
-Error : AssertionError - 
-Timestamp: 2024-10-22 22:55:49.119919
+Reason: Unable to run main.py
+Error:   File "/home/runner/work/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/python/chapter1/ex04B/main.py", line 4
+    ''''''''''
+             ^
+SyntaxError: unterminated string literal (detected at line 4)
 
-Status: PASSED!
-Check: 4
-Test: Output is formatted correctly
-Reason: None
-Timestamp: 2024-10-22 22:55:49.147107
+Timestamp: 2024-10-22 23:55:30.034086
+
+Status: FAILED!
+Reason: Unable to run main.py
+Error:   File "/home/runner/work/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/python/chapter1/ex04B/main.py", line 4
+    ''''''''''
+             ^
+SyntaxError: unterminated string literal (detected at line 4)
+
+Timestamp: 2024-10-22 23:55:30.034151
+
+Status: FAILED!
+Reason: Unable to run main.py
+Error:   File "/home/runner/work/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/python/chapter1/ex04B/main.py", line 4
+    ''''''''''
+             ^
+SyntaxError: unterminated string literal (detected at line 4)
+
+Timestamp: 2024-10-22 23:55:30.133061
+
+Status: FAILED!
+Reason: Unable to run main.py
+Error:   File "/home/runner/work/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/python/chapter1/ex04B/main.py", line 4
+    ''''''''''
+             ^
+SyntaxError: unterminated string literal (detected at line 4)
+
+Timestamp: 2024-10-22 23:55:30.133172
