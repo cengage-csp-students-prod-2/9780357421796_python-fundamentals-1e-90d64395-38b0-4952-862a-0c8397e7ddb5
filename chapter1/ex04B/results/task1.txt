@@ -3,7 +3,7 @@ Status: PASSED!
 Check: 1
 Test: Assign variable `whole_num`
 Reason: whole_num\s*=\s*int\(input\(".*"\)\)` was found in the program.None
-Timestamp: 2024-10-22 23:57:38.689704
+Timestamp: 2024-10-22 23:58:41.337583
 
 Status: FAILED!
 Check: 2
@@ -11,21 +11,21 @@ Test: Docstring added
 Reason: Unable to find '^("""|''').*(
 .*)*("""|''')' in the program.
 Error : str - AssertionError
-Timestamp: 2024-10-22 23:57:38.690222
+Timestamp: 2024-10-22 23:58:41.337948
 
 Status: FAILED!
 Check: 3
 Test: Output is correct
 Reason: Unable to find '['Output is correct']' in the program's output.
 Enter a whole number: __________
-7777777777
+70
 __________
 .
 Error : AssertionError - 
-Timestamp: 2024-10-22 23:57:38.714103
+Timestamp: 2024-10-22 23:58:41.353825
 
 Status: PASSED!
 Check: 4
 Test: Output is formatted correctly
 Reason: None
-Timestamp: 2024-10-22 23:57:38.751617
+Timestamp: 2024-10-22 23:58:41.379606
