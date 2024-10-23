@@ -1,5 +1,4 @@
 # Write your code here
-
 mySentence = input("Type a sentence: ")
 myWord = input("Word to look for in sentence: ")
 # Normalize both the sentence and the word to lowercase
