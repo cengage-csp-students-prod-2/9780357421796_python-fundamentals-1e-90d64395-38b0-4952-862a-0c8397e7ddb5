@@ -3,28 +3,28 @@ Status: PASSED!
 Check: 1
 Test: Output, test 1
 Reason: None
-Timestamp: 2024-10-23 01:20:00.173423
+Timestamp: 2024-10-23 01:27:21.907799
 
 Status: PASSED!
 Check: 2
 Test: Declare a user input variable named `count` that takes a number
 Reason: count\s*=\s+int\(\s*input\(".*"\)\)` was found in the program.None
-Timestamp: 2024-10-23 01:20:00.173943
+Timestamp: 2024-10-23 01:27:21.908233
 
 Status: PASSED!
 Check: 3
 Test: Declare a user input variable that takes a string
 Reason: ^([^\s]*){1}\s*=\s+input\(".*"\)` was found in the program.None
-Timestamp: 2024-10-23 01:20:00.174260
+Timestamp: 2024-10-23 01:27:21.908511
 
 Status: PASSED!
 Check: 4
 Test: Output, test 2
 Reason: None
-Timestamp: 2024-10-23 01:20:00.189494
+Timestamp: 2024-10-23 01:27:21.924165
 
 Status: PASSED!
 Check: 5
 Test: Output, test 3
 Reason: None
-Timestamp: 2024-10-23 01:20:00.205507
+Timestamp: 2024-10-23 01:27:21.940085
