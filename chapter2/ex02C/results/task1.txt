@@ -3,13 +3,13 @@ Status: PASSED!
 Check: 1
 Test: Input / output, test 1
 Reason: None
-Timestamp: 2024-10-23 02:20:17.597425
+Timestamp: 2024-10-23 02:20:59.624634
 
 Status: PASSED!
 Check: 2
 Test: Input / output, test 2
 Reason: None
-Timestamp: 2024-10-23 02:20:17.613757
+Timestamp: 2024-10-23 02:20:59.640440
 
 Status: FAILED!
 Check: 3
@@ -18,4 +18,4 @@ Reason: Unable to find '["There are 8 occurrences of 'said' in the sentence"]' i
 Type a sentence: Word to look for in sentence: There are 7 occurrences of 'said' in the sentence.
 .
 Error : AssertionError - Unable to find There are 8 occurrences of 'said' in the sentence in the program's output.
-Timestamp: 2024-10-23 02:20:17.629786
+Timestamp: 2024-10-23 02:20:59.656125
