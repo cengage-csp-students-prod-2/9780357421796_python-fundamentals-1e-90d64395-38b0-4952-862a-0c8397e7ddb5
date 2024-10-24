@@ -1,10 +1,12 @@
 # Write your code here
-
 mySentence = input("Type a sentence: ")
+
 myWord = input("Word to look for in sentence: ")
-#Normalize both the sentence and the word to lowercase
+
+# Prepare the sentence for accurate counting
 mySubString = mySentence.strip().lower()
-myWord = myWord.lower()
-#Count occurrences of the word
-myCount = mySubString.split().count(myWord)
+
+# Count occurrences of the word
+myCount = mySubString.count(myWord.lower())  # Also lowercase the search word
+
 print("There are", myCount, "occurrences of", repr(myWord), "in the sentence.")
