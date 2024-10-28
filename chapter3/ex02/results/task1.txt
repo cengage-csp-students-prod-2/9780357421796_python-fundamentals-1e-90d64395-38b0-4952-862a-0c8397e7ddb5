@@ -3,20 +3,20 @@ Status: FAILED!
 Check: 1
 Test: Check non `TRUE` or `FALSE` inputs
 Reason: Unable to find '['Please answer TRUE or FALSE', 'Have a great day!']' in the program's output.
-Return True or False: Python3 was released in 2008: Please answer True or False.
+Return True or False: Python3 was released in 2008: Please answer True or False
 Have a great day!
 .
 Error : AssertionError - Unable to find Please answer TRUE or FALSE in the program's output.
-Timestamp: 2024-10-28 22:38:53.676039
+Timestamp: 2024-10-28 22:40:32.552225
 
 Status: PASSED!
 Check: 2
 Test: Check `TRUE` input
 Reason: None
-Timestamp: 2024-10-28 22:38:53.691756
+Timestamp: 2024-10-28 22:40:32.567746
 
 Status: PASSED!
 Check: 3
 Test: Check `FALSE` input
 Reason: None
-Timestamp: 2024-10-28 22:38:53.707528
+Timestamp: 2024-10-28 22:40:32.583041
