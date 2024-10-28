@@ -1,9 +1,10 @@
 
-Status: PASSED!
+Status: FAILED!
 Check: 1
 Test: Assign variable `whole_num`
-Reason: whole_num\s*=\s*int\(input\(".*"\)\)` was found in the program.None
-Timestamp: 2024-10-28 21:50:21.373251
+Reason: Unable to find 'whole_num\s*=\s*int\(input\(".*"\)\)' in the program.
+Error : str - AssertionError
+Timestamp: 2024-10-28 22:54:43.337268
 
 Status: FAILED!
 Check: 2
@@ -11,30 +12,16 @@ Test: Docstring added
 Reason: Unable to find '^("""|''').*(
 .*)*("""|''')' in the program.
 Error : str - AssertionError
-Timestamp: 2024-10-28 21:50:21.373591
+Timestamp: 2024-10-28 22:54:43.337603
 
-Status: FAILED!
+Status: PASSED!
 Check: 3
 Test: Output is correct
-Reason: Unable to find '['Output is correct']' in the program's output.
-Enter a whole number: __________
-7 * 2 = 14
-7 * 4 = 28
-7 * 6 = 42
-7 * 8 = 56
-7 * 10 = 70
-7 * 12 = 84
-7 * 14 = 98
-7 * 16 = 112
-7 * 18 = 126
-7 * 20 = 140
-__________
-.
-Error : AssertionError - 
-Timestamp: 2024-10-28 21:50:21.389679
+Reason: None
+Timestamp: 2024-10-28 22:54:43.353363
 
 Status: PASSED!
 Check: 4
 Test: Output is formatted correctly
 Reason: None
-Timestamp: 2024-10-28 21:50:21.415532
+Timestamp: 2024-10-28 22:54:43.379203
