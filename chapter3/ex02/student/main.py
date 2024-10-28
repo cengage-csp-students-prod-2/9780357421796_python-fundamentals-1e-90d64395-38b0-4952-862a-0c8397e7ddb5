@@ -6,6 +6,6 @@ if answer == 'True':
 elif answer == 'False':
     print('Incorrect.')
 else:
-	print('Please answer True or False')
-	
+	print('Please answer TRUE or FALSE')
+
 print("Have a great day!")
