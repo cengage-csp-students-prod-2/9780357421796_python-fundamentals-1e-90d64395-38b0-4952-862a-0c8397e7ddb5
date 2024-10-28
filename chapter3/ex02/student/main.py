@@ -17,5 +17,4 @@ elif answer == 'False':
     print('Incorrect.')
 else:
 	print('Please answer True or False')
-
 print("Have a great day!")
