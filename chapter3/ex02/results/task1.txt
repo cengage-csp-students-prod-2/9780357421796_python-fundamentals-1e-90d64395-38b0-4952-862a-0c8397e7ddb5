@@ -1,0 +1,54 @@
+
+Status: FAILED!
+Reason: Unable to run main.py
+Error: Traceback (most recent call last):
+  File "/home/runner/work/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/python/chapter3/ex02/main.py", line 2, in <module>
+    year = int(input('When was Python3 first released?'))
+ValueError: invalid literal for int() with base 10: 'idk'
+
+Timestamp: 2024-10-28 22:28:59.024349
+
+Status: FAILED!
+Reason: Unable to run main.py
+Error: Traceback (most recent call last):
+  File "/home/runner/work/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/python/chapter3/ex02/main.py", line 2, in <module>
+    year = int(input('When was Python3 first released?'))
+ValueError: invalid literal for int() with base 10: 'idk'
+
+Timestamp: 2024-10-28 22:28:59.024427
+
+Status: FAILED!
+Reason: Unable to run main.py
+Error: Traceback (most recent call last):
+  File "/home/runner/work/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/python/chapter3/ex02/main.py", line 2, in <module>
+    year = int(input('When was Python3 first released?'))
+ValueError: invalid literal for int() with base 10: 'TRUE'
+
+Timestamp: 2024-10-28 22:28:59.094119
+
+Status: FAILED!
+Reason: Unable to run main.py
+Error: Traceback (most recent call last):
+  File "/home/runner/work/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/python/chapter3/ex02/main.py", line 2, in <module>
+    year = int(input('When was Python3 first released?'))
+ValueError: invalid literal for int() with base 10: 'TRUE'
+
+Timestamp: 2024-10-28 22:28:59.094207
+
+Status: FAILED!
+Reason: Unable to run main.py
+Error: Traceback (most recent call last):
+  File "/home/runner/work/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/python/chapter3/ex02/main.py", line 2, in <module>
+    year = int(input('When was Python3 first released?'))
+ValueError: invalid literal for int() with base 10: 'FALSE'
+
+Timestamp: 2024-10-28 22:28:59.164109
+
+Status: FAILED!
+Reason: Unable to run main.py
+Error: Traceback (most recent call last):
+  File "/home/runner/work/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/python/chapter3/ex02/main.py", line 2, in <module>
+    year = int(input('When was Python3 first released?'))
+ValueError: invalid literal for int() with base 10: 'FALSE'
+
+Timestamp: 2024-10-28 22:28:59.164196
