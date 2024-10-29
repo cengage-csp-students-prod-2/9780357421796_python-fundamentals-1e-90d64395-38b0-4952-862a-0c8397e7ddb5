@@ -1,9 +1,10 @@
 
-Status: PASSED!
+Status: FAILED!
 Check: 1
 Test: Assign variable `whole_num`
-Reason: whole_num\s*=\s*int\(input\(".*"\)\)` was found in the program.None
-Timestamp: 2024-10-29 01:05:31.848423
+Reason: Unable to find 'whole_num\s*=\s*int\(input\(".*"\)\)' in the program.
+Error : str - AssertionError
+Timestamp: 2024-10-29 01:08:32.892989
 
 Status: FAILED!
 Check: 2
@@ -11,30 +12,32 @@ Test: Docstring added
 Reason: Unable to find '^("""|''').*(
 .*)*("""|''')' in the program.
 Error : str - AssertionError
-Timestamp: 2024-10-29 01:05:31.848743
+Timestamp: 2024-10-29 01:08:32.893319
 
 Status: FAILED!
 Check: 3
 Test: Output is correct
 Reason: Unable to find '['Output is correct']' in the program's output.
+__________
 Type a whole number: __________
+Multiplication table for 7:
+7 x 1 = 7
 7 x 2 = 14
+7 x 3 = 21
 7 x 4 = 28
+7 x 5 = 35
 7 x 6 = 42
+7 x 7 = 49
 7 x 8 = 56
+7 x 9 = 63
 7 x 10 = 70
-7 x 12 = 84
-7 x 14 = 98
-7 x 16 = 112
-7 x 18 = 126
-7 x 20 = 140
 __________
 .
 Error : AssertionError - 
-Timestamp: 2024-10-29 01:05:31.864590
+Timestamp: 2024-10-29 01:08:32.909265
 
 Status: PASSED!
 Check: 4
 Test: Output is formatted correctly
 Reason: None
-Timestamp: 2024-10-29 01:05:31.890153
+Timestamp: 2024-10-29 01:08:32.934733
