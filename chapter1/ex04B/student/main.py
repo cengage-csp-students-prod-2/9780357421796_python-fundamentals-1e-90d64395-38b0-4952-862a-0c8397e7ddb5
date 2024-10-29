@@ -1,7 +1,7 @@
 """
 This is how we create a multiplication table
 """
-whole_num = input("Type a whole number: ")
+whole_num = int(input("Type a whole number: "))
 print ("_" * 10)
 print ("Number: " + whole_num)
 print (int(whole_num) * 2)
