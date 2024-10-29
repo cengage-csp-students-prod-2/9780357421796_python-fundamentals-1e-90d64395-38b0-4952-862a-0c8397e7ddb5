@@ -1,0 +1,13 @@
+
+Status: PASSED!
+Check: 1
+Test: Defined a condition that checks the data type
+Reason:     elif type(num) != int:
+        continue` was found in the program.None
+Timestamp: 2024-10-29 22:38:44.916542
+
+Status: PASSED!
+Check: 4
+Test: Output is correct
+Reason: None
+Timestamp: 2024-10-29 22:38:44.933573
