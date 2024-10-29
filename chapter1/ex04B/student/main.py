@@ -2,13 +2,15 @@
 """
 This is how we create a multiplication table
 """
-print ("_" * 10)
+print("_" * 10)
 whole_num = input("Type a whole number: ")
-print ("_" * 10)
-print (whole_num)
-print (int(whole_num) * 2)
-print (int(whole_num) * 4)
-print (int(whole_num) * 6)
-print (int(whole_num) * 8)
-print (int(whole_num) * 10)
-print ("_" * 10)
+
+try:
+    num = int(whole_num)
+    print("_" * 10)
+    print(f"Multiplication table for {num}:")
+    for i in range(1, 11):
+        print(f"{num} x {i} = {num * i}")
+    print("_" * 10)
+except ValueError:
+    print("Please enter a valid whole number.")
