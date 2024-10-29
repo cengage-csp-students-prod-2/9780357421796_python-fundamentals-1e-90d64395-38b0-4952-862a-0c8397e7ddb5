@@ -1,0 +1,18 @@
+
+Status: PASSED!
+Check: 1
+Test: Program uses a `while` loop
+Reason: while not valid:` was found in the program.None
+Timestamp: 2024-10-29 00:48:20.180035
+
+Status: PASSED!
+Check: 2
+Test: Validate a correct password
+Reason: None
+Timestamp: 2024-10-29 00:48:20.195600
+
+Status: PASSED!
+Check: 3
+Test: Program handles an incorrect password entry
+Reason: None
+Timestamp: 2024-10-29 00:48:20.211267
