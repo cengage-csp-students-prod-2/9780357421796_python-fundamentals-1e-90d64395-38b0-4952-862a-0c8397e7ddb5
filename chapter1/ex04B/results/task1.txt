@@ -4,7 +4,7 @@ Check: 1
 Test: Assign variable `whole_num`
 Reason: Unable to find 'whole_num\s*=\s*int\(input\(".*"\)\)' in the program.
 Error : str - AssertionError
-Timestamp: 2024-10-29 02:06:56.969723
+Timestamp: 2024-10-29 02:09:18.576420
 
 Status: FAILED!
 Check: 2
@@ -12,23 +12,16 @@ Test: Docstring added
 Reason: Unable to find '^("""|''').*(
 .*)*("""|''')' in the program.
 Error : str - AssertionError
-Timestamp: 2024-10-29 02:06:56.970183
+Timestamp: 2024-10-29 02:09:18.576759
 
-Status: FAILED!
+Status: PASSED!
 Check: 3
 Test: Output is correct
-Reason: Unable to find '['Output is correct']' in the program's output.
-__________
-Type a whole number: __________
-7
-7777777777
-__________
-.
-Error : AssertionError - 
-Timestamp: 2024-10-29 02:06:56.985968
+Reason: None
+Timestamp: 2024-10-29 02:09:18.592449
 
 Status: PASSED!
 Check: 4
 Test: Output is formatted correctly
 Reason: None
-Timestamp: 2024-10-29 02:06:57.015764
+Timestamp: 2024-10-29 02:09:18.618562
