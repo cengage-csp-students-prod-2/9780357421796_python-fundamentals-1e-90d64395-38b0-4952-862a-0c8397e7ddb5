@@ -3,16 +3,16 @@ Status: PASSED!
 Check: 1
 Test: Program uses a `while` loop
 Reason: while not valid:` was found in the program.None
-Timestamp: 2024-10-29 00:51:28.516503
+Timestamp: 2024-10-29 00:51:56.424234
 
 Status: PASSED!
 Check: 2
 Test: Validate a correct password
 Reason: None
-Timestamp: 2024-10-29 00:51:28.532544
+Timestamp: 2024-10-29 00:51:56.440305
 
 Status: PASSED!
 Check: 3
 Test: Program handles an incorrect password entry
 Reason: None
-Timestamp: 2024-10-29 00:51:28.548663
+Timestamp: 2024-10-29 00:51:56.456022
