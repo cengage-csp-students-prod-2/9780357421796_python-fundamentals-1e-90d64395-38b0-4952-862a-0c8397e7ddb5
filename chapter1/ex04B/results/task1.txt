@@ -3,14 +3,14 @@ Status: PASSED!
 Check: 1
 Test: Assign variable `whole_num`
 Reason: whole_num\s*=\s*int\(input\(".*"\)\)` was found in the program.None
-Timestamp: 2024-10-29 02:18:14.593663
+Timestamp: 2024-10-29 02:18:48.875381
 
 Status: PASSED!
 Check: 2
 Test: Docstring added
 Reason: ^("""|''').*(
 .*)*("""|''')` was found in the program.None
-Timestamp: 2024-10-29 02:18:14.595059
+Timestamp: 2024-10-29 02:18:48.876823
 
 Status: FAILED!
 Reason: Unable to run main.py
@@ -19,7 +19,7 @@ Error: Traceback (most recent call last):
     print ("Number: " + whole_num)
 TypeError: can only concatenate str (not "int") to str
 
-Timestamp: 2024-10-29 02:18:14.669170
+Timestamp: 2024-10-29 02:18:48.951639
 
 Status: FAILED!
 Reason: Unable to run main.py
@@ -28,7 +28,7 @@ Error: Traceback (most recent call last):
     print ("Number: " + whole_num)
 TypeError: can only concatenate str (not "int") to str
 
-Timestamp: 2024-10-29 02:18:14.669223
+Timestamp: 2024-10-29 02:18:48.951712
 
 Status: FAILED!
 Reason: Unable to run main.py
@@ -37,7 +37,7 @@ Error: Traceback (most recent call last):
     print ("Number: " + whole_num)
 TypeError: can only concatenate str (not "int") to str
 
-Timestamp: 2024-10-29 02:18:14.739381
+Timestamp: 2024-10-29 02:18:49.022526
 
 Status: FAILED!
 Reason: Unable to run main.py
@@ -46,4 +46,4 @@ Error: Traceback (most recent call last):
     print ("Number: " + whole_num)
 TypeError: can only concatenate str (not "int") to str
 
-Timestamp: 2024-10-29 02:18:14.739449
+Timestamp: 2024-10-29 02:18:49.022595
