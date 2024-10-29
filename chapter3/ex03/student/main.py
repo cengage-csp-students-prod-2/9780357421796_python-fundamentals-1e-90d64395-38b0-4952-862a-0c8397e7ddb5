@@ -17,7 +17,7 @@ first = True
 while True:
     user_input = input("Enter your password: ")
     if user_input == password:
-        print("Welcome back, Josh")
+        print(f"Welcome back, {name}")
         break
     else:
         print("Incorrect password, try again...")
