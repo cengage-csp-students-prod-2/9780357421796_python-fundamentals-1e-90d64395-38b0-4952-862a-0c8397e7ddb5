@@ -2,8 +2,15 @@
 """
 This is how we create a multiplication table
 """
-whole_num = int(input("Type a whole number: "))
 print("_" * 10)
-for i in range(1, 11):
-    print(f"{whole_num} x {i * 2} = {whole_num * (i * 2)}")
-print("_" * 10)
+whole_num = input("Type a whole number: ")
+
+try:
+    num = int(whole_num)
+    print("_" * 10)
+    print(f"Multiplication table for {num}:")
+    for i in range(1, 11):
+        print(f"{num} x {i} = {num * i}")
+    print("_" * 10)
+except ValueError:
+    print("Please enter a valid whole number.")
