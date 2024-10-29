@@ -1,4 +1,3 @@
-# Write your code here
 """
 This is how we create a multiplication table
 """
