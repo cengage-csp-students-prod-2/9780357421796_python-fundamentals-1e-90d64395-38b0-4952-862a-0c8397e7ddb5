@@ -6,7 +6,7 @@ Error:   File "/home/runner/work/9780357421796_python-fundamentals-1e-90d64395-3
     ^^^^
 SyntaxError: invalid syntax
 
-Timestamp: 2024-10-31 00:54:10.517352
+Timestamp: 2024-10-31 00:54:51.078918
 
 Status: FAILED!
 Reason: Unable to run main.py
@@ -15,7 +15,7 @@ Error:   File "/home/runner/work/9780357421796_python-fundamentals-1e-90d64395-3
     ^^^^
 SyntaxError: invalid syntax
 
-Timestamp: 2024-10-31 00:54:10.517441
+Timestamp: 2024-10-31 00:54:51.079006
 
 Status: FAILED!
 Check: 1
@@ -26,7 +26,7 @@ Error : AssertionError -   File "/home/runner/work/9780357421796_python-fundamen
     ^^^^
 SyntaxError: invalid syntax
 
-Timestamp: 2024-10-31 00:54:10.517486
+Timestamp: 2024-10-31 00:54:51.079054
 
 Status: FAILED!
 Check: 2
@@ -34,31 +34,23 @@ Test: Output is correct 2
 Reason: Unable to find 'else:
    print("You are all set with cars.")' in the program.
 Error : str - AssertionError
-Timestamp: 2024-10-31 00:54:10.518008
+Timestamp: 2024-10-31 00:54:51.079563
 
 Status: FAILED!
 Check: 2
 Test: 
 Reason: 
 Error : AssertionError - Failed
-Timestamp: 2024-10-31 00:54:10.518050
+Timestamp: 2024-10-31 00:54:51.079607
 
 Status: PASSED!
 Check: 3
 Test: Declare a variable named `amt` that uses the `len` tuple method
 Reason: amt = len(cars)` was found in the program.None
-Timestamp: 2024-10-31 00:54:10.518283
+Timestamp: 2024-10-31 00:54:51.079825
 
-Status: FAILED!
+Status: PASSED!
 Check: 4
 Test: Declare a variable named `fav` that uses the `count` tuple method
-Reason: Unable to find 'fav = cars.count("coupe")' in the program.
-Error : str - AssertionError
-Timestamp: 2024-10-31 00:54:10.518574
-
-Status: FAILED!
-Check: 4
-Test: 
-Reason: 
-Error : AssertionError - Failed
-Timestamp: 2024-10-31 00:54:10.518612
+Reason: fav = cars.count("coupe")` was found in the program.None
+Timestamp: 2024-10-31 00:54:51.080091
