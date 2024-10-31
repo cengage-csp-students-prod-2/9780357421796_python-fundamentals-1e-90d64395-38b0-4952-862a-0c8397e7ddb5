@@ -1,0 +1,41 @@
+
+Status: PASSED!
+Check: 1
+Test: Output is correct 1
+Reason: None
+Timestamp: 2024-10-31 00:53:16.959647
+
+Status: FAILED!
+Check: 2
+Test: Output is correct 2
+Reason: Unable to find 'else:
+   print("You are all set with cars.")' in the program.
+Error : str - AssertionError
+Timestamp: 2024-10-31 00:53:16.960178
+
+Status: FAILED!
+Check: 2
+Test: 
+Reason: 
+Error : AssertionError - Failed
+Timestamp: 2024-10-31 00:53:16.960222
+
+Status: PASSED!
+Check: 3
+Test: Declare a variable named `amt` that uses the `len` tuple method
+Reason: amt = len(cars)` was found in the program.None
+Timestamp: 2024-10-31 00:53:16.960447
+
+Status: FAILED!
+Check: 4
+Test: Declare a variable named `fav` that uses the `count` tuple method
+Reason: Unable to find 'fav = cars.count("coupe")' in the program.
+Error : str - AssertionError
+Timestamp: 2024-10-31 00:53:16.960736
+
+Status: FAILED!
+Check: 4
+Test: 
+Reason: 
+Error : AssertionError - Failed
+Timestamp: 2024-10-31 00:53:16.960774
