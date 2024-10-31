@@ -1,7 +1,7 @@
 # Write your code here
 cars = ('coupe', 'coupe', 'coupe', 'carbiolet', 'sedan')
 fav = cars.count('coupe')
-print(x)
+print(fav)
 amt = len(cars)
 print(amt)
 
