@@ -6,7 +6,7 @@ Error: Traceback (most recent call last):
     print(x)
 NameError: name 'x' is not defined
 
-Timestamp: 2024-10-31 00:55:34.425199
+Timestamp: 2024-10-31 00:56:25.711566
 
 Status: FAILED!
 Reason: Unable to run main.py
@@ -15,7 +15,7 @@ Error: Traceback (most recent call last):
     print(x)
 NameError: name 'x' is not defined
 
-Timestamp: 2024-10-31 00:55:34.425275
+Timestamp: 2024-10-31 00:56:25.711660
 
 Status: FAILED!
 Check: 1
@@ -26,31 +26,23 @@ Error : AssertionError - Traceback (most recent call last):
     print(x)
 NameError: name 'x' is not defined
 
-Timestamp: 2024-10-31 00:55:34.425321
+Timestamp: 2024-10-31 00:56:25.711716
 
-Status: FAILED!
+Status: PASSED!
 Check: 2
 Test: Output is correct 2
-Reason: Unable to find 'else:
-   print("You are all set with cars.")' in the program.
-Error : str - AssertionError
-Timestamp: 2024-10-31 00:55:34.425908
-
-Status: FAILED!
-Check: 2
-Test: 
-Reason: 
-Error : AssertionError - Failed
-Timestamp: 2024-10-31 00:55:34.425957
+Reason: else:
+   print("You are all set with cars.")` was found in the program.None
+Timestamp: 2024-10-31 00:56:25.712327
 
 Status: PASSED!
 Check: 3
 Test: Declare a variable named `amt` that uses the `len` tuple method
 Reason: amt = len(cars)` was found in the program.None
-Timestamp: 2024-10-31 00:55:34.426236
+Timestamp: 2024-10-31 00:56:25.712607
 
 Status: PASSED!
 Check: 4
 Test: Declare a variable named `fav` that uses the `count` tuple method
 Reason: fav = cars.count("coupe")` was found in the program.None
-Timestamp: 2024-10-31 00:55:34.426545
+Timestamp: 2024-10-31 00:56:25.712891
