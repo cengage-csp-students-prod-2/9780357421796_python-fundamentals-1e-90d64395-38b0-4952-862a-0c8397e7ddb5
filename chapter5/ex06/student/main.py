@@ -5,8 +5,8 @@ print(x)
 amt = len(cars)
 print(amt)
 
-stat = 0.45 # %45
+stat = 0.45
 if x/amt > stat:
     print("Too many coupes in the garage")
-else:
+    else:
     print("You are all set with cars. to the terminal.")
