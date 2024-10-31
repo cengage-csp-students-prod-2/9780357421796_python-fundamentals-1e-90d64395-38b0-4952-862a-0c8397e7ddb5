@@ -1,32 +1,32 @@
 
 Status: FAILED!
 Reason: Unable to run main.py
-Error:   File "/home/runner/work/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/python/chapter5/ex06/main.py", line 11
-    else:
-    ^^^^
-SyntaxError: invalid syntax
+Error: Traceback (most recent call last):
+  File "/home/runner/work/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/python/chapter5/ex06/main.py", line 4, in <module>
+    print(x)
+NameError: name 'x' is not defined
 
-Timestamp: 2024-10-31 00:54:51.078918
+Timestamp: 2024-10-31 00:55:34.425199
 
 Status: FAILED!
 Reason: Unable to run main.py
-Error:   File "/home/runner/work/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/python/chapter5/ex06/main.py", line 11
-    else:
-    ^^^^
-SyntaxError: invalid syntax
+Error: Traceback (most recent call last):
+  File "/home/runner/work/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/python/chapter5/ex06/main.py", line 4, in <module>
+    print(x)
+NameError: name 'x' is not defined
 
-Timestamp: 2024-10-31 00:54:51.079006
+Timestamp: 2024-10-31 00:55:34.425275
 
 Status: FAILED!
 Check: 1
 Test: 
 Reason: 
-Error : AssertionError -   File "/home/runner/work/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/python/chapter5/ex06/main.py", line 11
-    else:
-    ^^^^
-SyntaxError: invalid syntax
+Error : AssertionError - Traceback (most recent call last):
+  File "/home/runner/work/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/python/chapter5/ex06/main.py", line 4, in <module>
+    print(x)
+NameError: name 'x' is not defined
 
-Timestamp: 2024-10-31 00:54:51.079054
+Timestamp: 2024-10-31 00:55:34.425321
 
 Status: FAILED!
 Check: 2
@@ -34,23 +34,23 @@ Test: Output is correct 2
 Reason: Unable to find 'else:
    print("You are all set with cars.")' in the program.
 Error : str - AssertionError
-Timestamp: 2024-10-31 00:54:51.079563
+Timestamp: 2024-10-31 00:55:34.425908
 
 Status: FAILED!
 Check: 2
 Test: 
 Reason: 
 Error : AssertionError - Failed
-Timestamp: 2024-10-31 00:54:51.079607
+Timestamp: 2024-10-31 00:55:34.425957
 
 Status: PASSED!
 Check: 3
 Test: Declare a variable named `amt` that uses the `len` tuple method
 Reason: amt = len(cars)` was found in the program.None
-Timestamp: 2024-10-31 00:54:51.079825
+Timestamp: 2024-10-31 00:55:34.426236
 
 Status: PASSED!
 Check: 4
 Test: Declare a variable named `fav` that uses the `count` tuple method
 Reason: fav = cars.count("coupe")` was found in the program.None
-Timestamp: 2024-10-31 00:54:51.080091
+Timestamp: 2024-10-31 00:55:34.426545
