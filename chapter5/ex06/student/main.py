@@ -9,4 +9,4 @@ stat = 0.45
 if fav/amt > stat:
     print("Too many coupes in the garage")
 else:
-    print("You are all set with cars. to the terminal.")
+    print("You are all set with cars.")
