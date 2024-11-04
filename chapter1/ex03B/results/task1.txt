@@ -1,0 +1,12 @@
+
+Status: PASSED!
+Check: 1
+Test: Check area of circle
+Reason: None
+Timestamp: 2024-11-04 17:50:05.232483
+
+Status: PASSED!
+Check: 2
+Test: Check diameter of a circle
+Reason: None
+Timestamp: 2024-11-04 17:50:05.247905
