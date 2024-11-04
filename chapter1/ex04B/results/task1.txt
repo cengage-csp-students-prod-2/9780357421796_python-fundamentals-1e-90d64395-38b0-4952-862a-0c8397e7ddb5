@@ -3,47 +3,23 @@ Status: PASSED!
 Check: 1
 Test: Assign variable `whole_num`
 Reason: whole_num\s*=\s*int\(input\(".*"\)\)` was found in the program.None
-Timestamp: 2024-10-29 02:18:48.875381
+Timestamp: 2024-11-04 17:40:51.260609
 
 Status: PASSED!
 Check: 2
 Test: Docstring added
 Reason: ^("""|''').*(
 .*)*("""|''')` was found in the program.None
-Timestamp: 2024-10-29 02:18:48.876823
+Timestamp: 2024-11-04 17:40:51.326506
 
-Status: FAILED!
-Reason: Unable to run main.py
-Error: Traceback (most recent call last):
-  File "/home/runner/work/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/python/chapter1/ex04B/main.py", line 6, in <module>
-    print ("Number: " + whole_num)
-TypeError: can only concatenate str (not "int") to str
+Status: PASSED!
+Check: 3
+Test: Output is correct
+Reason: None
+Timestamp: 2024-11-04 17:40:51.342458
 
-Timestamp: 2024-10-29 02:18:48.951639
-
-Status: FAILED!
-Reason: Unable to run main.py
-Error: Traceback (most recent call last):
-  File "/home/runner/work/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/python/chapter1/ex04B/main.py", line 6, in <module>
-    print ("Number: " + whole_num)
-TypeError: can only concatenate str (not "int") to str
-
-Timestamp: 2024-10-29 02:18:48.951712
-
-Status: FAILED!
-Reason: Unable to run main.py
-Error: Traceback (most recent call last):
-  File "/home/runner/work/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/python/chapter1/ex04B/main.py", line 6, in <module>
-    print ("Number: " + whole_num)
-TypeError: can only concatenate str (not "int") to str
-
-Timestamp: 2024-10-29 02:18:49.022526
-
-Status: FAILED!
-Reason: Unable to run main.py
-Error: Traceback (most recent call last):
-  File "/home/runner/work/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/9780357421796_python-fundamentals-1e-90d64395-38b0-4952-862a-0c8397e7ddb5/python/chapter1/ex04B/main.py", line 6, in <module>
-    print ("Number: " + whole_num)
-TypeError: can only concatenate str (not "int") to str
-
-Timestamp: 2024-10-29 02:18:49.022595
+Status: PASSED!
+Check: 4
+Test: Output is formatted correctly
+Reason: None
+Timestamp: 2024-11-04 17:40:51.368301
