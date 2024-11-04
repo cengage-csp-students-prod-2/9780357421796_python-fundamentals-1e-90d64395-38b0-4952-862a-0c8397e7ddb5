@@ -3,23 +3,23 @@ Status: PASSED!
 Check: 1
 Test: Assign variable `whole_num`
 Reason: whole_num\s*=\s*int\(input\(".*"\)\)` was found in the program.None
-Timestamp: 2024-11-04 17:41:54.081894
+Timestamp: 2024-11-04 18:13:52.075691
 
 Status: PASSED!
 Check: 2
 Test: Docstring added
 Reason: ^("""|''').*(
 .*)*("""|''')` was found in the program.None
-Timestamp: 2024-11-04 17:41:54.082417
+Timestamp: 2024-11-04 18:13:52.076209
 
 Status: PASSED!
 Check: 3
 Test: Output is correct
 Reason: None
-Timestamp: 2024-11-04 17:41:54.098361
+Timestamp: 2024-11-04 18:13:52.092084
 
 Status: PASSED!
 Check: 4
 Test: Output is formatted correctly
 Reason: None
-Timestamp: 2024-11-04 17:41:54.124071
+Timestamp: 2024-11-04 18:13:52.118473
