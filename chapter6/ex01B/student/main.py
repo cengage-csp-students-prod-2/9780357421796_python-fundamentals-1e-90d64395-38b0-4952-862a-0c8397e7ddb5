@@ -14,5 +14,5 @@ def word_counter(myStringParm):
     sorted(myDict)
     print(myDict)
 
-word_counter("Mississippi")
+word_counter("supercalifragilisticexpialidocious")
 print(word_counter("Mississippi"))
