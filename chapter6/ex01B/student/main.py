@@ -17,3 +17,4 @@ def word_counter(myStringParm):
     print(myDict)
 
 word_counter("Mississippi")
+print(word_counter("Mississippi"))
