@@ -1,32 +1,18 @@
 
-Status: FAILED!
+Status: PASSED!
 Check: 1
-Test: 
-Reason: 
-Error : AssertionError - None != {'T': 1, 'h': 1, 'i': 2, 's': 3, 'a': 1, 't': 2, 'e': 1}
-Timestamp: 2024-11-05 02:30:29.139972
+Test: `word_counter` value test 1
+Reason: None
+Timestamp: 2024-11-05 02:53:05.244755
 
-Status: FAILED!
+Status: PASSED!
 Check: 2
-Test: 
-Reason: 
-Error : AssertionError - None != {'M': 1, 'i': 4, 's': 4, 'p': 2}
-Timestamp: 2024-11-05 02:30:29.140128
+Test: `word_counter` value test 2
+Reason: None
+Timestamp: 2024-11-05 02:53:05.244880
 
-Status: FAILED!
+Status: PASSED!
 Check: 3
 Test: Output is correct
-Reason: Unable to find '["{'M': 1, 'i': 4, 's': 4, 'p': 2}"]' in the program's output.
-{'s': 1, 'u': 2, 'p': 3, 'e': 4, 'r': 5, 'c': 6, 'a': 7, 'l': 8, 'i': 9, 'f': 10, 'g': 11, 't': 12, 'x': 13, 'd': 14, 'o': 15}
-{'m': 1, 'i': 2, 's': 3, 'p': 4}
-None
-.
-Error : AssertionError - Unable to find {'M': 1, 'i': 4, 's': 4, 'p': 2} in the program's output.
-Timestamp: 2024-11-05 02:30:29.156605
-
-Status: FAILED!
-Check: 3
-Test: 
-Reason: 
-Error : AssertionError - Failed
-Timestamp: 2024-11-05 02:30:29.156706
+Reason: None
+Timestamp: 2024-11-05 02:53:05.260730
