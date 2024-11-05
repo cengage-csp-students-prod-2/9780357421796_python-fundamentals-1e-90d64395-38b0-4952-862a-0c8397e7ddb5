@@ -11,8 +11,8 @@ def word_counter(myStringParm):
             myWord = myWord + myLet
             myCount = myCount + 1
             myDict.update({myLet:myCount})
-sorted(myDict)
-print(myDict)
+    sorted(myDict)
+    print(myDict)
 
-word_counter("supercalifragilisticexpialidocious")
+word_counter("Mississippi")
 print(word_counter("Mississippi"))
