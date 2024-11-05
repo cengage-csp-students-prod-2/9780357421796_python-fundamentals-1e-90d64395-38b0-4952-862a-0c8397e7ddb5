@@ -1,18 +1,12 @@
 # Write your code here
-def word_counter(myStringParm):
-    myDict = dict()
-    myWord = ""
-    myCount = 0
-    myStringParm = myStringParm.strip()
-    myStringParm = myStringParm.lower()
-    parm_length = len(myStringParm)
-    for myLet in myStringParm:
-        if myLet not in myWord:
-            myWord = myWord + myLet
-            myCount = myCount + 1
-            myDict.update({myLet:myCount})
-    sorted(myDict)
-    print(myDict)
-
-word_counter("Mississippi")
+def word_counter(sentence):
+    result = {}
+    for char in sentence:
+        if char != " ":
+            if char in result:
+                result[char] += 1
+            else:
+                result[char] = 1
+    return result
+           
 print(word_counter("Mississippi"))
