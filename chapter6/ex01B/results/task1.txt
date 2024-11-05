@@ -4,29 +4,27 @@ Check: 1
 Test: 
 Reason: 
 Error : AssertionError - None != {'T': 1, 'h': 1, 'i': 2, 's': 3, 'a': 1, 't': 2, 'e': 1}
-Timestamp: 2024-11-05 01:50:07.533145
+Timestamp: 2024-11-05 02:28:58.837682
 
 Status: FAILED!
 Check: 2
 Test: 
 Reason: 
 Error : AssertionError - None != {'M': 1, 'i': 4, 's': 4, 'p': 2}
-Timestamp: 2024-11-05 01:50:07.533265
+Timestamp: 2024-11-05 02:28:58.837810
 
 Status: FAILED!
 Check: 3
 Test: Output is correct
 Reason: Unable to find '["{'M': 1, 'i': 4, 's': 4, 'p': 2}"]' in the program's output.
 {'m': 1, 'i': 2, 's': 3, 'p': 4}
-{'m': 1, 'i': 2, 's': 3, 'p': 4}
-None
 .
 Error : AssertionError - Unable to find {'M': 1, 'i': 4, 's': 4, 'p': 2} in the program's output.
-Timestamp: 2024-11-05 01:50:07.548772
+Timestamp: 2024-11-05 02:28:58.854068
 
 Status: FAILED!
 Check: 3
 Test: 
 Reason: 
 Error : AssertionError - Failed
-Timestamp: 2024-11-05 01:50:07.548834
+Timestamp: 2024-11-05 02:28:58.854142
