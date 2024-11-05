@@ -11,4 +11,4 @@ def word_counter(myStringParm):
             myDict[myLet]= myOccur
     print(myDict)
     
-print(word_counter("Mississippi"))
+word_counter("Mississippi")
