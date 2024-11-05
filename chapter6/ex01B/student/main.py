@@ -8,6 +8,7 @@ def word_counter(myStringParm):
     myStringParm = myStringParm.strip()
     myStringParm = myStringParm.lower()
     parm_length = len(myStringParm)
+    
     for myLet in myStringParm:
         if myLet not in myWord:
             myWord = myWord + myLet
