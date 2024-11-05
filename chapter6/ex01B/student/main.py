@@ -15,8 +15,9 @@ parm_length = len(myStringParm)
             myWord = myWord + myLet
             myCount = myCount + 1
             myDict.update({myLet:myCount})
-    sorted(myDict)
-    print(myDict)
+            
+sorted(myDict)
+print(myDict)
 
 word_counter("Mississippi")
 print(word_counter("Mississippi"))
