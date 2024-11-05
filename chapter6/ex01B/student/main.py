@@ -5,9 +5,10 @@ def word_counter(myStringParm):
     myDict = dict()
     myWord = ""
     myCount = 0
-    myStringParm = myStringParm.strip()
-    myStringParm = myStringParm.lower()
-    parm_length = len(myStringParm)
+
+myStringParm = myStringParm.strip()
+myStringParm = myStringParm.lower()
+parm_length = len(myStringParm)
     
     for myLet in myStringParm:
         if myLet not in myWord:
