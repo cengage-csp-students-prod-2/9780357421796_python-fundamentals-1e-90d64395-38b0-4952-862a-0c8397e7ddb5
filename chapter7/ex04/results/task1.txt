@@ -3,16 +3,16 @@ Status: PASSED!
 Check: 1
 Test: Output is correct
 Reason: None
-Timestamp: 2024-11-07 02:22:16.608324
+Timestamp: 2024-11-07 02:24:58.815988
 
 Status: PASSED!
 Check: 2
 Test: Define the `Package` class
 Reason: class Package:` was found in the program.None
-Timestamp: 2024-11-07 02:22:16.608541
+Timestamp: 2024-11-07 02:24:58.816217
 
 Status: PASSED!
 Check: 3
 Test: The script can initialize objects of type `Package`
 Reason: None
-Timestamp: 2024-11-07 02:22:16.608619
+Timestamp: 2024-11-07 02:24:58.816294
