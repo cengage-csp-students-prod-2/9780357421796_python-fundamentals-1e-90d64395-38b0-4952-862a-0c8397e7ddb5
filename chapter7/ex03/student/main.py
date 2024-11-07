@@ -14,8 +14,6 @@ class Wheel:
         circumference = 2 * math.pi * self.radius
         return circumference
 
-
-
     def swap_radius(self, new_radius):
         self.radius = new_radius
         return new_radius
