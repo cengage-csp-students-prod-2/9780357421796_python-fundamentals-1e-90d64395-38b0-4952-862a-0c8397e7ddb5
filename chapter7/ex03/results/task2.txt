@@ -1,0 +1,12 @@
+
+Status: PASSED!
+Check: 1
+Test: Program accepts user input, test 1
+Reason: None
+Timestamp: 2024-11-07 01:30:17.777578
+
+Status: PASSED!
+Check: 2
+Test: Program accepts user input, test 2
+Reason: None
+Timestamp: 2024-11-07 01:30:17.793674
