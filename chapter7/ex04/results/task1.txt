@@ -1,0 +1,18 @@
+
+Status: PASSED!
+Check: 1
+Test: Output is correct
+Reason: None
+Timestamp: 2024-11-07 02:21:29.252015
+
+Status: PASSED!
+Check: 2
+Test: Define the `Package` class
+Reason: class Package:` was found in the program.None
+Timestamp: 2024-11-07 02:21:29.252379
+
+Status: PASSED!
+Check: 3
+Test: The script can initialize objects of type `Package`
+Reason: None
+Timestamp: 2024-11-07 02:21:29.252495
