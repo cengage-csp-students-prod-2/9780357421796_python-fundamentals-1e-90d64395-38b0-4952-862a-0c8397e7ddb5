@@ -1,0 +1,18 @@
+
+Status: PASSED!
+Check: 1
+Test: `Eagle` class inherits from `Bird` class attributes
+Reason: None
+Timestamp: 2024-11-12 02:16:37.948204
+
+Status: PASSED!
+Check: 2
+Test: Program can initialize objects of type `Eagle`
+Reason: None
+Timestamp: 2024-11-12 02:16:37.948320
+
+Status: PASSED!
+Check: 3
+Test: `Eagle` object `clutch_size` is set to **3**
+Reason: None
+Timestamp: 2024-11-12 02:16:37.948393
