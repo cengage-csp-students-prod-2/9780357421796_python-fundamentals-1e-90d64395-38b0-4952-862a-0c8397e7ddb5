@@ -1,8 +1,6 @@
 # Write the TabletCamera class here 
 
-
 # Write the Facial_recognition class here
-
 
 # Write the BioTablet class here
 
