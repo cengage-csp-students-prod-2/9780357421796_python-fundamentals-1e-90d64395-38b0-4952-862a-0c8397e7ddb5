@@ -3,10 +3,10 @@ Status: PASSED!
 Check: 1
 Test: `scan_face` method prints **"Scanning Face..."**
 Reason: None
-Timestamp: 2024-11-12 02:31:34.628409
+Timestamp: 2024-11-12 02:32:00.995977
 
 Status: PASSED!
 Check: 3
 Test: The `BioTablet`object's `scan_face` method prints **"Scanning Face..."**
 Reason: None
-Timestamp: 2024-11-12 02:31:34.628653
+Timestamp: 2024-11-12 02:32:00.996252

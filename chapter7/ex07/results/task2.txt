@@ -3,22 +3,22 @@ Status: PASSED!
 Check: 1
 Test: The program can initialize an object of type `BioTablet`
 Reason: None
-Timestamp: 2024-11-12 02:31:38.650067
+Timestamp: 2024-11-12 02:32:00.996362
 
 Status: PASSED!
 Check: 2
 Test: Initialized object can print `pixels` inherited from `TabletCamera` class
 Reason: None
-Timestamp: 2024-11-12 02:31:38.666443
+Timestamp: 2024-11-12 02:32:01.012058
 
 Status: PASSED!
 Check: 3
 Test: The program can initialize an object of type `Facial_recognition``
 Reason: None
-Timestamp: 2024-11-12 02:31:38.666551
+Timestamp: 2024-11-12 02:32:01.012191
 
 Status: PASSED!
 Check: 4
 Test: The program can initialize an object of type `TabletCamera`
 Reason: None
-Timestamp: 2024-11-12 02:31:38.666638
+Timestamp: 2024-11-12 02:32:01.012292
