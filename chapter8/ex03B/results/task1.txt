@@ -3,11 +3,11 @@ Status: PASSED!
 Check: 1
 Test: Define a `for` loop
 Reason: for\s+\w*\s+in\s+\w*\:` was found in the program.None
-Timestamp: 2024-11-13 01:19:33.967333
+Timestamp: 2024-11-13 01:20:13.992535
 
 Status: FAILED!
 Check: 2
 Test: Define the `resources_scanner` function
 Reason: Unable to find 'def\s+resources_scanner\(\w+\):' in the program.
 Error : str - AssertionError
-Timestamp: 2024-11-13 01:19:33.967655
+Timestamp: 2024-11-13 01:20:13.992830
