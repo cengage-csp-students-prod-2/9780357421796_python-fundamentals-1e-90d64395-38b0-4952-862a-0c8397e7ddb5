@@ -1,13 +1,13 @@
 
-Status: PASSED!
+Status: FAILED!
 Check: 1
 Test: Define a `for` loop
-Reason: for\s+\w*\s+in\s+\w*\:` was found in the program.None
-Timestamp: 2024-11-13 01:23:11.193279
+Reason: Unable to find 'for\s+\w*\s+in\s+\w*\:' in the program.
+Error : str - AssertionError
+Timestamp: 2024-11-13 01:24:47.183689
 
-Status: FAILED!
+Status: PASSED!
 Check: 2
 Test: Define the `resources_scanner` function
-Reason: Unable to find 'def\s+resources_scanner\(\w+\):' in the program.
-Error : str - AssertionError
-Timestamp: 2024-11-13 01:23:11.193578
+Reason: def\s+resources_scanner\(\w+\):` was found in the program.None
+Timestamp: 2024-11-13 01:24:47.183977
