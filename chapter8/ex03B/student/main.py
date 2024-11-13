@@ -1,6 +1,6 @@
 # Write your function here
 
-import string  # Example import, replace with any module you want to inspect
+import string
 
 def resources_scanner(package):
     """
@@ -9,16 +9,10 @@ def resources_scanner(package):
     
     :param package: The package/module whose resources we want to list.
     """
-    # Get the list of resources in the package using dir()
     resources = dir(package)
-    
-    # Loop through the resources and print them
     for resource in resources:
         print(resource)
 
-# Example usage:
 if __name__ == '__main__':
-    import math  # You can replace this with any package/module you are interested in.
-    
-    # Call the function with the math module (or any module/package)
+    import math
     resources_scanner(math)
