@@ -17,12 +17,9 @@ class methodPackage():
             myStuff.append(p)        
             print (p, myStuff)
 
-"""
 myPack = methodPackage('')
 myPack.resources_scanner(string)
 myPack.print_resources_scanner('')
-
-"""
 
 if __name__ == '__main__':
     import string 
