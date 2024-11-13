@@ -7,7 +7,7 @@ class methodPackage():
     def __init__(self, package):
         self.package = package
 
-    def resources_scanner (self, package):
+    def resources_scanner(self, package):
         self.package = package
         print(dir(self.package))
 
