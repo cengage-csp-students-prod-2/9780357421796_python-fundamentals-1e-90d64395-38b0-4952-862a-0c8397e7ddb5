@@ -1,0 +1,6 @@
+
+Status: PASSED!
+Check: 1
+Test: Write to `newfile.txt`
+Reason: file.write("I enjoy learning to code in Python")` was found in the program.None
+Timestamp: 2024-11-14 01:14:52.392375
