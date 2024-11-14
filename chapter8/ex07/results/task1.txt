@@ -1,30 +1,26 @@
 
-Status: FAILED!
+Status: PASSED!
 Check: 1
 Test: Output file, test 1
-Reason: Unable to find 'name,wages
-James Miller,540' in the program.
-Error : str - AssertionError
-Timestamp: 2024-11-14 02:27:06.786416
+Reason: name,wages
+James Miller,540` was found in the program.None
+Timestamp: 2024-11-14 02:28:24.000264
 
-Status: FAILED!
+Status: PASSED!
 Check: 2
 Test: Output file, test 2
-Reason: Unable to find 'Teresia Brown,615
-' in the program.
-Error : str - AssertionError
-Timestamp: 2024-11-14 02:27:06.786641
+Reason: Teresia Brown,615
+` was found in the program.None
+Timestamp: 2024-11-14 02:28:24.000585
 
-Status: FAILED!
+Status: PASSED!
 Check: 3
 Test: Output file, test 3
-Reason: Unable to find 'Mary Laney,600' in the program.
-Error : str - AssertionError
-Timestamp: 2024-11-14 02:27:06.786815
+Reason: Mary Laney,600` was found in the program.None
+Timestamp: 2024-11-14 02:28:24.000854
 
-Status: FAILED!
+Status: PASSED!
 Check: 4
 Test: Output file, test 4
-Reason: Unable to find 'employee_name,pay_rate' in the program.
-Error : str - AssertionError
-Timestamp: 2024-11-14 02:27:06.786968
+Reason: employee_name,pay_rate` was found in the program.None
+Timestamp: 2024-11-14 02:28:24.001108
