@@ -2,3 +2,8 @@
 
 with open('newfile.txt', 'w') as file:
     file.write('I enjoy learning to code in Python')
+
+file = open('newfile.txt', 'w')
+file.write('I enjoy learning to code in Python')
+file.close()
+
