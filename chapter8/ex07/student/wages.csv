@@ -1,1 +1,4 @@
-name,hours_worked,pay_rate
+employee_name,hours_worked,pay_rate
+John Henry,38,570
+Maria Gray,43,645
+Larry Simon,35,525
