@@ -1,14 +1,19 @@
 # Use the function return to create an error
+
+import string
+
+
 def createError():
-    # Task 1
-    # Write your code here
+    dinning = dict(
+        name="Johnny's Restaurant",
+        location="Times Square"
+    )
+    print(f"I went to eat at {dinning['name']} yesterday in {dinning['address']}.")
 
-
-    # Task 2
-    # Write you import modules here
-    
-    
+    f = string.ascii_letterss
+    print(f)
     return
+
 
 # Use this code to test your function
 if __name__ == '__main__':
