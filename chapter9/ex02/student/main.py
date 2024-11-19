@@ -7,9 +7,9 @@ def createError():
         name="Johnny's Restaurant",
         location="Times Square"
     )
-    print(f"I went to eat at {dinning['name']} yesterday in {dinning['location']}.")  # Fixed the key to 'location'
+    print(f"I went to eat at {dinning['name']} yesterday in {dinning['location']}.")
 
-    f = string.ascii_letters  # Corrected the typo
+    f = string.ascii_letters
     print(f)
     return
 
