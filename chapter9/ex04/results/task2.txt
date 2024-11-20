@@ -3,4 +3,4 @@ Status: PASSED!
 Check: 1
 Test: Subclass the `Exception` class
 Reason: class InvalidRecipeError(Exception):` was found in the program.None
-Timestamp: 2024-11-20 15:47:03.002993
+Timestamp: 2024-11-20 15:47:48.302837
