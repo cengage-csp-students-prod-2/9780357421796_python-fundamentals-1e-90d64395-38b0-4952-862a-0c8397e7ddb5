@@ -1,9 +1,17 @@
+import re
+
+
 class EmailNotValidError(Exception):
     """
     Custom exception for invalid email addresses.
+    """
+    def __init__(self, message):
+        super().__init__(message)
 
-    Attributes:
-        message (str): Description of the error to help with debugging.
+
+class ProviderTooShortError(Exception):
+    """
+    Custom exception for email addresses with short providers.
     """
     def __init__(self, message):
         super().__init__(message)
@@ -11,101 +19,128 @@ class EmailNotValidError(Exception):
 
 def is_email_valid(email):
     """
-    Validates an email address to ensure it contains an '@' symbol.
+    Validates an email address using regex.
 
     Args:
         email (str): The email address to validate.
 
     Raises:
-        EmailNotValidError: If the email address does not contain an '@' symbol.
+        EmailNotValidError: If the email address does not match the required pattern.
 
     Returns:
-        bool: True if the email is valid, False otherwise (though this is redundant since it raises an exception).
+        bool: True if the email is valid.
     """
-    if '@' not in email:
-        raise EmailNotValidError(f"Invalid email address: {email}. Missing '@' symbol.")
+    # Regex for validating email addresses
+    email_regex = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+    if not re.match(email_regex, email):
+        raise EmailNotValidError(f"Invalid email address: {email}")
     return True
 
 
+def is_email_valid_extended(email):
+    """
+    Validates an email address and handles exceptions gracefully.
+
+    Args:
+        email (str): The email address to validate.
+
+    Returns:
+        str: A message indicating the validation status.
+    """
+    try:
+        is_email_valid(email)
+        return f"Valid email: {email}"
+    except EmailNotValidError as e:
+        return str(e)
+
+
+def is_email_valid_extended_finally(emails):
+    """
+    Validates a list of email addresses and returns a list of valid ones.
+
+    Args:
+        emails (list of str): A list of email addresses to validate.
+
+    Returns:
+        list of str: A list of valid email addresses.
+    """
+    valid_emails = []
+    for email in emails:
+        try:
+            is_email_valid(email)
+            valid_emails.append(email)
+        except EmailNotValidError as e:
+            print(e)
+        finally:
+            print(f"Processed email: {email}")
+    return valid_emails
+
+
+def validate_provider_length(email):
+    """
+    Validates the provider length of an email address.
+
+    Args:
+        email (str): The email address to validate.
+
+    Raises:
+        ProviderTooShortError: If the provider is less than 5 characters.
+    """
+    try:
+        provider = email.split('@')[1].split('.')[0]
+        if len(provider) < 5:
+            raise ProviderTooShortError(f"Provider '{provider}' is too short in email: {email}")
+    except IndexError:
+        raise EmailNotValidError(f"Invalid email structure: {email}")
+
+
+def filter_emails(emails):
+    """
+    Filters invalid emails and returns the IDs of users with valid emails.
+
+    Args:
+        emails (dict): A dictionary of user IDs and email addresses.
+
+    Returns:
+        list of int: A list of user IDs with valid email addresses.
+    """
+    valid_ids = []
+    for user_id, email in emails.items():
+        try:
+            is_email_valid(email)
+            validate_provider_length(email)
+            valid_ids.append(user_id)
+        except (EmailNotValidError, ProviderTooShortError) as e:
+            print(e)
+    return valid_ids
+
+
 # Example Usage
-try:
-    test_email = "invalidemail.com"
-    is_email_valid(test_email)
-except EmailNotValidError as e:
-    print(e)
+if __name__ == "__main__":
+    email_list = [
+        "valid@example.com",
+        "invalidemail.com",
+        "john@gmail",
+        "@email.com",
+        "test@spam.com",
+    ]
 
+    # Task 2: Extended validation
+    for email in email_list:
+        print(is_email_valid_extended(email))
 
+    # Task 3: Finally block
+    valid_emails = is_email_valid_extended_finally(email_list)
+    print("Valid emails:", valid_emails)
 
-for key, email in  # Loop through the mailing list:
+    # Task 4: Advanced validation
+    users = {
+        1: "validuser@example.com",
+        2: "short@xyz.io",
+        3: "badformat.com",
+        4: "ok@google.com",
+        5: "test@sp.com",
+    }
 
-    if '@' not in  # Check if the email contains an @:
-
-        raise  # Raise an EmailNotValidError exception if the @ is not present
-
-
-
-def is_email_valid_extended(mailing_list):
-     """
-       Your docstring documentation starts here.
-
-       For more information on how to proper document your function, please refer to the official PEP8:
-        https://www.python.org/dev/peps/pep-0008/#documentation-strings.
-
-    """
-
-
-    final_users_list = # Array to hold user ids
-
-    # Inserted a try.., except.. block to cast the exception
-    try:
-
-        # Loop through the mailing list
-        for key, email in # Your mailing list:
-
-
-            if '@' in # Check if the @ is present in the email:
-
-                # Append the id of users with valid emails
-
-        else:
-
-
-            raise # Raises an EmailNotValidError otherwise
-    except # Your user-defined exception:
-
-
-        return # Return a user-friendly message to cast the exception
-
-
-
-def is_email_valid_extended_finally(mailing_list):
-     """
-       Your docstring documentation starts here.
-
-       For more information on how to proper document your function, please refer to the official PEP8:
-        https://www.python.org/dev/peps/pep-0008/#documentation-strings.
-
-    """
-
-    final_users_list = # Array to hold user ids
-
-    # Inserted a try.., except.. block to cast the exception
-    try:
-        # Loop through the mailing list
-        for key, email in  # Your mailing list:
-
-
-            if '@' in # Check if the @ is present in the email:
-
-                # Append the id of users with valid emails
-
-        else:
-
-
-            raise # Raises an EmailNotValidError otherwise
-    except # Your user-defined exception:
-
-        # Print a user-friendly message to cast the exception
-    finally:
-
-        return # Return the id of the users with valid email
+    valid_user_ids = filter_emails(users)
+    print("Users with valid emails:", valid_user_ids)
