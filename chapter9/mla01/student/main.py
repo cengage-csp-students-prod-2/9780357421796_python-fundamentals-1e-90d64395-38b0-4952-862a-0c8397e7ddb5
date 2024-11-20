@@ -54,13 +54,12 @@ def is_email_valid_extended_finally(email_list):
     """
     Validates a list of email addresses, ensuring all emails are processed,
     and collects valid email addresses.
-
     Args:
         email_list (list of str): List of email addresses to validate.
-
     Returns:
         list of str: Valid email addresses.
     """
+
     valid_emails = []
     for email in email_list:
         try:
@@ -138,15 +137,12 @@ if __name__ == "__main__":
         "valid@longprovider.com"
     ]
 
-    # Task 2: Validate emails with extended functionality
     for email in email_list:
         print(is_email_valid_extended(email))
 
-    # Task 3: Process email list with a finally block
     valid_emails = is_email_valid_extended_finally(email_list)
     print("\nValid Emails:", valid_emails)
 
-    # Task 4: Advanced validation
     users = {
         1: "goodemail@example.com",
         2: "short@xyz.io",
