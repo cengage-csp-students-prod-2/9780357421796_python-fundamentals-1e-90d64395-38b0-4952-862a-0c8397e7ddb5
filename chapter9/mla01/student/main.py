@@ -59,7 +59,6 @@ def is_email_valid_extended_finally(email_list):
     Returns:
         list of str: Valid email addresses.
     """
-
     valid_emails = []
     for email in email_list:
         try:
