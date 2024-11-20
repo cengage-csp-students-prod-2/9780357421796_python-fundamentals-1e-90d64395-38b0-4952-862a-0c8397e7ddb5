@@ -6,6 +6,73 @@ billing_end_point: str = "APItesting/master/getBillingInfo.json"
 customer_end_point: str = "APItesting/master/getCustomers.json"
 site_end_point: str = "APItesting/master/getSites.json"
 
+
+import requests
+from typing import List, Dict
+
+class AccessApi:
+    def __init__(self, base_url: str):
+        """
+        Constructor to initialize base URL for the API.
+        :param base_url: The base URL of the API
+        """
+        self.base_url = base_url
+
+    def get_base_url(self) -> str:
+        """
+        Returns the current base URL of the API.
+        :return: The base URL
+        """
+        return self.base_url
+
+    def set_base_url(self, base_url: str) -> None:
+        """
+        Sets the current base URL of the API.
+        :param base_url: The new base URL
+        """
+        self.base_url = base_url
+
+    def is_alive(self) -> bool:
+        """
+        Tests if the base URL is responding to GET requests.
+        :return: True if the base URL is alive, False otherwise
+        """
+        try:
+            response = requests.get(self.base_url)
+            return response.status_code == 200
+        except requests.exceptions.RequestException:
+            return False
+
+    def get_json(self, endpoint: str) -> List[Dict]:
+        """
+        Sends a GET request to the concatenated URL (base URL + endpoint) and returns the response as a list.
+        :param endpoint: The endpoint to be concatenated to the base URL
+        :return: The JSON response as a list
+        """
+        url = f"{self.base_url}/{endpoint}"
+        response = requests.get(url)
+        return response.json()
+
+    def get_status_code(self, endpoint: str) -> int:
+        """
+        Sends a GET request to the concatenated URL (base URL + endpoint) and returns the status code.
+        :param endpoint: The endpoint to be concatenated to the base URL
+        :return: The HTTP status code of the response
+        """
+        url = f"{self.base_url}/{endpoint}"
+        response = requests.get(url)
+        return response.status_code
+
+    def get_response_time(self, endpoint: str) -> float:
+        """
+        Sends a GET request to the concatenated URL (base URL + endpoint) and returns the response time in seconds.
+        :param endpoint: The endpoint to be concatenated to the base URL
+        :return: The response time in seconds
+        """
+        url = f"{self.base_url}/{endpoint}"
+        response = requests.get(url)
+        return response.elapsed.total_seconds()
+
 # TASK 2
 
 # billing
