@@ -3,5 +3,5 @@ Status: FAILED!
 Check: 1
 Test: 
 Reason: 
-Error : IndentationError - expected an indented block after class definition on line 1 (main.py, line 2)
-Timestamp: 2024-11-20 16:06:17.293953
+Error : SyntaxError - invalid syntax (main.py, line 39)
+Timestamp: 2024-11-20 16:07:18.539358
