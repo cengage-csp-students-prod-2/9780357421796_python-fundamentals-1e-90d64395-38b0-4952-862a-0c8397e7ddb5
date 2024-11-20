@@ -1,23 +1,16 @@
-class EmailNotValidError():
-""" Raised when the target email is not valid """
- """
+class EmailNotValidError(Exception):
+    """
     Custom exception for invalid email addresses.
 
     Attributes:
         message (str): Description of the error to help with debugging.
-"""
+    """
     def __init__(self, message):
         super().__init__(message)
 
-def is_email_valid(mailing_list):
+
+def is_email_valid(email):
     """
-      Your docstring documentation starts here.
-
-      For more information on how to proper document your function, please refer to the official PEP8:
-       https://www.python.org/dev/peps/pep-0008/#documentation-strings.
-
-   """
-   """
     Validates an email address to ensure it contains an '@' symbol.
 
     Args:
@@ -29,16 +22,18 @@ def is_email_valid(mailing_list):
     Returns:
         bool: True if the email is valid, False otherwise (though this is redundant since it raises an exception).
     """
-
     if '@' not in email:
         raise EmailNotValidError(f"Invalid email address: {email}. Missing '@' symbol.")
     return True
 
+
+# Example Usage
 try:
     test_email = "invalidemail.com"
     is_email_valid(test_email)
 except EmailNotValidError as e:
     print(e)
+
 
 
 for key, email in  # Loop through the mailing list:
