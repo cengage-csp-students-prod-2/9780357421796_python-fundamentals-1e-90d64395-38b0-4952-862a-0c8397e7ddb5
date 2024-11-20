@@ -33,7 +33,13 @@ def is_email_valid(mailing_list):
     if '@' not in email:
         raise EmailNotValidError(f"Invalid email address: {email}. Missing '@' symbol.")
     return True
-    
+
+try:
+    test_email = "invalidemail.com"
+    is_email_valid(test_email)
+except EmailNotValidError as e:
+    print(e)
+
 
 for key, email in  # Loop through the mailing list:
 
