@@ -1,7 +1,6 @@
 
-Status: FAILED!
+Status: PASSED!
 Check: 1
-Test: 
-Reason: 
-Error : SyntaxError - invalid syntax (main.py, line 39)
-Timestamp: 2024-11-20 16:07:18.539566
+Test: Passing pattern
+Reason: .+` was found in the program.None
+Timestamp: 2024-11-20 16:11:42.666429
