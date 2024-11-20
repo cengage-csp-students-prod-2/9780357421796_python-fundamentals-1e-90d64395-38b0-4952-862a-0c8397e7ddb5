@@ -75,34 +75,73 @@ class AccessApi:
 
 # TASK 2
 
-# billing
-def test_billing_status_code():
+import pytest
+from AccessApi import AccessApi
 
-def test_billing_validate_schema():
+# Setup a base URL for testing
+BASE_URL = "https://raw.githubusercontent.com/cengage-ide-content/APItesting/main"
 
-def test_billing_validate_ssn():
+@pytest.fixture
+def api():
+    return AccessApi(BASE_URL)
 
-def test_billing_validate_time():
+# Task #01: The billing endpoint works as expected.
+def test_billing_status_code(api):
+    response = api.get_status_code("getBillingInfo.json")
+    assert response == 200
 
+def test_billing_schema(api):
+    json_response = api.get_json("getBillingInfo.json")
+    assert isinstance(json_response, list)
+    if len(json_response) > 0:
+        assert "id" in json_response[0] and isinstance(json_response[0]["id"], int)
+        assert "FirstName" in json_response[0] and isinstance(json_response[0]["FirstName"], str)
+        assert "SSN" in json_response[0] and isinstance(json_response[0]["SSN"], str)
+        assert len(json_response[0]["SSN"]) == 11  # Check if SSN is in the format XXX-XX-XXXX
 
-# customers
-def test_customers_status_code():
+def test_billing_response_time(api):
+    response_time = api.get_response_time("getBillingInfo.json")
+    assert response_time < 60  # Ensure the response time is less than 60 seconds.
 
-def test_customers_validate_schema():
+# Task #02: The site endpoint works as expected.
+def test_sites_status_code(api):
+    response = api.get_status_code("getSites.json")
+    assert response == 200
 
-def test_customers_validate_ssn():
+def test_sites_schema(api):
+    json_response = api.get_json("getSites.json")
+    assert isinstance(json_response, list)
+    if len(json_response) > 0:
+        assert "id" in json_response[0] and isinstance(json_response[0]["id"], int)
+        assert "address" in json_response[0] and isinstance(json_response[0]["address"], str)
+        assert "ThirdParty" in json_response[0] and isinstance(json_response[0]["ThirdParty"], str)
+        assert "admin" in json_response[0] and isinstance(json_response[0]["admin"], str)
 
-def test_customers_validate_time():
+def test_sites_response_time(api):
+    response_time = api.get_response_time("getSites.json")
+    assert response_time < 60  # Ensure the response time is less than 60 seconds.
 
+# Task #03: The customer endpoint works as expected.
+def test_customers_status_code(api):
+    response = api.get_status_code("getCustomers.json")
+    assert response == 200
 
-# site
-def test_site_status_code():
+def test_customers_schema(api):
+    json_response = api.get_json("getCustomers.json")
+    assert isinstance(json_response, list)
+    if len(json_response) > 0:
+        assert "id" in json_response[0] and isinstance(json_response[0]["id"], int)
+        assert "first_name" in json_response[0] and isinstance(json_response[0]["first_name"], str)
+        assert "email" in json_response[0] and isinstance(json_response[0]["email"], str)
 
-def test_site_validate_schema():
+def test_customers_response_time(api):
+    response_time = api.get_response_time("getCustomers.json")
+    assert response_time < 60  # Ensure the response time is less than 60 seconds.
 
-def test_site_validate_ssn():
+# Task #04: Ensure all tests pass without errors.
+def test_all_endpoints(api):
+    assert api.is_alive()  # Ensure the base URL is alive
 
-def test_site_validate_time():
 
     
 # task 3
