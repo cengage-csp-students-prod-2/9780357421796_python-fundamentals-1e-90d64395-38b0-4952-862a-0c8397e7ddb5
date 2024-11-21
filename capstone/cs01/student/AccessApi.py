@@ -58,7 +58,3 @@ class AccessApi:
         response = requests.get(url)
         elapsed_time = time.time() - start_time
         return elapsed_time
-
-
-
-
