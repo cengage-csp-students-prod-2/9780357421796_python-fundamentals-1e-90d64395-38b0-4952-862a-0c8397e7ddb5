@@ -7,149 +7,88 @@ customer_end_point: str = "APItesting/master/getCustomers.json"
 site_end_point: str = "APItesting/master/getSites.json"
 
 
-import requests
-from typing import List, Dict
-
-class AccessApi:
-    def __init__(self, base_url: str):
-        """
-        Constructor to initialize base URL for the API.
-        :param base_url: The base URL of the API
-        """
-        self.base_url = base_url
-
-    def get_base_url(self) -> str:
-        """
-        Returns the current base URL of the API.
-        :return: The base URL
-        """
-        return self.base_url
-
-    def set_base_url(self, base_url: str) -> None:
-        """
-        Sets the current base URL of the API.
-        :param base_url: The new base URL
-        """
-        self.base_url = base_url
-
-    def is_alive(self) -> bool:
-        """
-        Tests if the base URL is responding to GET requests.
-        :return: True if the base URL is alive, False otherwise
-        """
-        try:
-            response = requests.get(self.base_url)
-            return response.status_code == 200
-        except requests.exceptions.RequestException:
-            return False
-
-    def get_json(self, endpoint: str) -> List[Dict]:
-        """
-        Sends a GET request to the concatenated URL (base URL + endpoint) and returns the response as a list.
-        :param endpoint: The endpoint to be concatenated to the base URL
-        :return: The JSON response as a list
-        """
-        url = f"{self.base_url}/{endpoint}"
-        response = requests.get(url)
-        return response.json()
-
-    def get_status_code(self, endpoint: str) -> int:
-        """
-        Sends a GET request to the concatenated URL (base URL + endpoint) and returns the status code.
-        :param endpoint: The endpoint to be concatenated to the base URL
-        :return: The HTTP status code of the response
-        """
-        url = f"{self.base_url}/{endpoint}"
-        response = requests.get(url)
-        return response.status_code
-
-    def get_response_time(self, endpoint: str) -> float:
-        """
-        Sends a GET request to the concatenated URL (base URL + endpoint) and returns the response time in seconds.
-        :param endpoint: The endpoint to be concatenated to the base URL
-        :return: The response time in seconds
-        """
-        url = f"{self.base_url}/{endpoint}"
-        response = requests.get(url)
-        return response.elapsed.total_seconds()
-
-# TASK 2
-
 import pytest
+import requests
 from AccessApi import AccessApi
 
-# Setup a base URL for testing
+# Base URL for the API
 BASE_URL = "https://raw.githubusercontent.com/cengage-ide-content/APItesting/main"
 
-@pytest.fixture
-def api():
-    return AccessApi(BASE_URL)
+# Create AccessApi instance
+api = AccessApi(BASE_URL)
 
 # Task #01: The billing endpoint works as expected.
-def test_billing_status_code(api):
-    response = api.get_status_code("getBillingInfo.json")
-    assert response == 200
+def test_billing_status_code():
+    endpoint = "getBillingInfo.json"
+    status_code = api.get_status_code(endpoint)
+    assert status_code == 200, f"Expected status code 200 but got {status_code}"
 
-def test_billing_schema(api):
-    json_response = api.get_json("getBillingInfo.json")
-    assert isinstance(json_response, list)
-    if len(json_response) > 0:
-        assert "id" in json_response[0] and isinstance(json_response[0]["id"], int)
-        assert "FirstName" in json_response[0] and isinstance(json_response[0]["FirstName"], str)
-        assert "SSN" in json_response[0] and isinstance(json_response[0]["SSN"], str)
-        assert len(json_response[0]["SSN"]) == 11  # Check if SSN is in the format XXX-XX-XXXX
+def test_billing_schema():
+    endpoint = "getBillingInfo.json"
+    data = api.get_json_from_endpoint(endpoint)
+    # Check that the keys exist and have the correct type
+    assert isinstance(data, list), "Response is not a list"
+    for item in data:
+        assert "id" in item and isinstance(item["id"], int), "Missing or invalid 'id'"
+        assert "FirstName" in item and isinstance(item["FirstName"], str), "Missing or invalid 'FirstName'"
+        assert "LastName" in item and isinstance(item["LastName"], str), "Missing or invalid 'LastName'"
+        assert "city" in item and isinstance(item["city"], str), "Missing or invalid 'city'"
+        assert "state" in item and isinstance(item["state"], str), "Missing or invalid 'state'"
+        assert "Lang" in item and isinstance(item["Lang"], str), "Missing or invalid 'Lang'"
+        assert "SSN" in item and isinstance(item["SSN"], str), "Missing or invalid 'SSN'"
 
-def test_billing_response_time(api):
-    response_time = api.get_response_time("getBillingInfo.json")
-    assert response_time < 60  # Ensure the response time is less than 60 seconds.
+def test_billing_ssn_format():
+    endpoint = "getBillingInfo.json"
+    data = api.get_json_from_endpoint(endpoint)
+    for item in data:
+        ssn = item.get("SSN")
+        assert len(ssn) == 11 and ssn[3] == '-' and ssn[6] == '-', f"Invalid SSN format: {ssn}"
+
+def test_billing_response_time():
+    endpoint = "getBillingInfo.json"
+    response_time = api.get_response_time(endpoint)
+    assert response_time < 60, f"Response time is too slow: {response_time} seconds"
 
 # Task #02: The site endpoint works as expected.
-def test_sites_status_code(api):
-    response = api.get_status_code("getSites.json")
-    assert response == 200
+def test_sites_status_code():
+    endpoint = "getSites.json"
+    status_code = api.get_status_code(endpoint)
+    assert status_code == 200, f"Expected status code 200 but got {status_code}"
 
-def test_sites_schema(api):
-    json_response = api.get_json("getSites.json")
-    assert isinstance(json_response, list)
-    if len(json_response) > 0:
-        assert "id" in json_response[0] and isinstance(json_response[0]["id"], int)
-        assert "address" in json_response[0] and isinstance(json_response[0]["address"], str)
-        assert "ThirdParty" in json_response[0] and isinstance(json_response[0]["ThirdParty"], str)
-        assert "admin" in json_response[0] and isinstance(json_response[0]["admin"], str)
+def test_sites_schema():
+    endpoint = "getSites.json"
+    data = api.get_json_from_endpoint(endpoint)
+    assert isinstance(data, list), "Response is not a list"
+    for item in data:
+        assert "id" in item and isinstance(item["id"], int), "Missing or invalid 'id'"
+        assert "address" in item and isinstance(item["address"], str), "Missing or invalid 'address'"
+        assert "ThirdParty" in item and isinstance(item["ThirdParty"], str), "Missing or invalid 'ThirdParty'"
+        assert "admin" in item and isinstance(item["admin"], str), "Missing or invalid 'admin'"
 
-def test_sites_response_time(api):
-    response_time = api.get_response_time("getSites.json")
-    assert response_time < 60  # Ensure the response time is less than 60 seconds.
+def test_sites_response_time():
+    endpoint = "getSites.json"
+    response_time = api.get_response_time(endpoint)
+    assert response_time < 60, f"Response time is too slow: {response_time} seconds"
 
 # Task #03: The customer endpoint works as expected.
-def test_customers_status_code(api):
-    response = api.get_status_code("getCustomers.json")
-    assert response == 200
+def test_customers_status_code():
+    endpoint = "getCustomers.json"
+    status_code = api.get_status_code(endpoint)
+    assert status_code == 200, f"Expected status code 200 but got {status_code}"
 
-def test_customers_schema(api):
-    json_response = api.get_json("getCustomers.json")
-    assert isinstance(json_response, list)
-    if len(json_response) > 0:
-        assert "id" in json_response[0] and isinstance(json_response[0]["id"], int)
-        assert "first_name" in json_response[0] and isinstance(json_response[0]["first_name"], str)
-        assert "email" in json_response[0] and isinstance(json_response[0]["email"], str)
+def test_customers_schema():
+    endpoint = "getCustomers.json"
+    data = api.get_json_from_endpoint(endpoint)
+    assert isinstance(data, list), "Response is not a list"
+    for item in data:
+        assert "id" in item and isinstance(item["id"], int), "Missing or invalid 'id'"
+        assert "first_name" in item and isinstance(item["first_name"], str), "Missing or invalid 'first_name'"
+        assert "last_name" in item and isinstance(item["last_name"], str), "Missing or invalid 'last_name'"
+        assert "email" in item and isinstance(item["email"], str), "Missing or invalid 'email'"
+        assert "ip_address" in item and isinstance(item["ip_address"], str), "Missing or invalid 'ip_address'"
+        assert "address" in item and isinstance(item["address"], str), "Missing or invalid 'address'"
 
-def test_customers_response_time(api):
-    response_time = api.get_response_time("getCustomers.json")
-    assert response_time < 60  # Ensure the response time is less than 60 seconds.
-
-# Task #04: Ensure all tests pass without errors.
-def test_all_endpoints(api):
-    assert api.is_alive()  # Ensure the base URL is alive
-
-
-    
-# task 3
-@pytest.mark.parametrize('base_url', [base_url])
-@pytest.mark.parametrize('billing_end_point', [billing_end_point, customer_end_point, site_end_point])
-
-
-@pytest.mark.parametrize('base_url', [base_url])
-@pytest.mark.parametrize('billing_end_point',[billing_end_point,customer_end_point,site_end_point])
-def test_billing_validate_time(base_url,billing_end_point):
-
+def test_customers_response_time():
+    endpoint = "getCustomers.json"
+    response_time = api.get_response_time(endpoint)
+    assert response_time < 60, f"Response time is too slow: {response_time} seconds"
