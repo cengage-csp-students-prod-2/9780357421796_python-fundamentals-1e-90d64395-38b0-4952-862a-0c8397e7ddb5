@@ -1,70 +1,64 @@
-
 import requests
-import json
-
+import time
+from typing import List, Dict, Any
 
 class AccessApi:
-    """
-    Class AccessApi is used to abstract lower level access to course required API
-
-    Attributes
-    ----------
-    url : str
-        A valid website used to hold the courses json filesS
-
-    Methods
-    -------
-    url_active()
-        returns True if the url is currently responding without errors, and False if not.
-
-    get_end_point(endpoint)
-        returns the json output of the GET request
-
-    """
-    def __init__(self, url):
+    def __init__(self, base_url: str):
         """
-        Parameters
-        ----------
-        url: str
-           a valid website forexample: http://google.com
+        Constructor to initialize the base URL of the API
         """
-        
+        self.base_url = base_url
+    
+    def get_base_url(self) -> str:
+        """
+        Returns the base URL.
+        """
+        return self.base_url
+    
+    def set_base_url(self, base_url: str) -> None:
+        """
+        Sets a new base URL.
+        """
+        self.base_url = base_url
+    
+    def is_alive(self) -> bool:
+        """
+        Checks if the base URL is responding to GET requests.
+        Returns True if it does, False otherwise.
+        """
+        try:
+            response = requests.get(self.base_url)
+            return response.status_code == 200
+        except requests.exceptions.RequestException:
+            return False
+    
+    def get_json_from_endpoint(self, endpoint: str) -> List[Dict[str, Any]]:
+        """
+        Takes an endpoint, concatenates it with the base URL, and sends a GET request.
+        Returns the response JSON as a list.
+        """
+        url = f"{self.base_url}/{endpoint}"
+        response = requests.get(url)
+        return response.json()
+    
+    def get_status_code(self, endpoint: str) -> int:
+        """
+        Takes an endpoint, concatenates it with the base URL, and returns the HTTP status code.
+        """
+        url = f"{self.base_url}/{endpoint}"
+        response = requests.get(url)
+        return response.status_code
+    
+    def get_response_time(self, endpoint: str) -> float:
+        """
+        Takes an endpoint, concatenates it with the base URL, and returns the elapsed response time.
+        """
+        url = f"{self.base_url}/{endpoint}"
+        start_time = time.time()
+        response = requests.get(url)
+        elapsed_time = time.time() - start_time
+        return elapsed_time
 
-    @property
-    def url(self) -> str:
-        
-
-    @url.setter
-    def url(self, url: str):
-        
-
-    def url_active(self) -> bool:
-       
-
-    def get_end_point(self, end_point:str) -> dict:
-        """
-            Parameters
-            ----------
-            end_point: str
-               a valid endpoint on a website  "api/sites/master.json"
-        """
-      
-    def get_status_code(self, end_point:str) -> int:
-        """
-            Parameters
-            ----------
-            end_point: str
-               a valid endpoint on a website  "api/sites/master.json"
-        """
-
-
-    def get_elapsed_time(self, end_point:str) -> float:
-        """
-            Parameters
-            ----------
-            end_point: str
-               a valid endpoint on a website  "api/sites/master.json"
-        """
 
 
 
